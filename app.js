@@ -5,7 +5,6 @@ const bodyParser = require("body-parser");
 const ejs = require("ejs");
 const _ = require("lodash");
 const mongoose = require("mongoose");
-const port = process.env.port || 3000;
 
 const homeStartingContent =
   "Welcome to the anonymous Blog Site write the blogs you need.";
@@ -101,6 +100,7 @@ app.get("/posts/:postId", function (req, res) {
   });
 });
 
+const port = process.env.port || 3000;
 app.listen(port, function () {
   console.log("Server started on port " + port);
 });
